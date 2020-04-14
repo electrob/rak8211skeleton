@@ -100,8 +100,8 @@ void rak_uart_init(uart_use_t uart_use)
           break;
 
       case UART_USE_GPRS:
-          comm_params.rx_pin_no = GPS_RXD;
-          comm_params.tx_pin_no = GPS_TXD;
+          comm_params.rx_pin_no = GPRS_TXD;
+          comm_params.tx_pin_no = GPRS_RXD;
           comm_params.rts_pin_no = 0;
           comm_params.cts_pin_no = 0;
           comm_params.flow_control = APP_UART_FLOW_CONTROL_DISABLED;

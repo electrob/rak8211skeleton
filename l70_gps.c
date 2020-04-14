@@ -4,6 +4,7 @@
 #include <string.h>
 
 #include "rak_uart_app.h"
+#include "l70_gps.h"
 
 void gps_uart_init (void) {
     rak_uart_init(UART_USE_GPS);

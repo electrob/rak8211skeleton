@@ -81,6 +81,7 @@
     <file file_name="bc95_g.h" />
     <file file_name="l70_gps.h" />
     <file file_name="rak_uart_app.c" />
+    <file file_name="rak_uart_app.h" />
   </project>
   <configuration
     Name="Release"

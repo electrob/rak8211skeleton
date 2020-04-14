@@ -10,6 +10,7 @@
 
 #include "at_cmds.h"
 #include "rak_uart_app.h"
+
 #include "bc95_g.h"
 
 void gsm_uart_init (void) {
