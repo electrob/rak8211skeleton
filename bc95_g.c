@@ -42,6 +42,27 @@ void test_gprs(void) {
     gsm_uart_print(at_cmd, 4);
 }
 
+void test_gprs1(void) {
+    uint8_t at_cmd[] = "AT+CEREG=1\r\n";
+    gsm_uart_print(at_cmd, strlen(at_cmd));
+}
 
+void test_gprs2(void) {
+    uint8_t at_cmd[] = "AT+CEREG?\r\n";
+    gsm_uart_print(at_cmd, strlen(at_cmd));
+}
 
+void test_gprs3(void) {
+    uint8_t at_cmd[] = "AT+NCCID?\r\n";
+    gsm_uart_print(at_cmd, strlen(at_cmd));
+}
 
+void test_gprs4(void) {
+    uint8_t at_cmd[] = "AT+CFUN?\r\n";
+    gsm_uart_print(at_cmd, strlen(at_cmd));
+}
+
+void test_gprs5(void) {
+    uint8_t at_cmd[] = "AT+COPS?\r\n";
+    gsm_uart_print(at_cmd, strlen(at_cmd));
+}

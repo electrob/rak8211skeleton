@@ -2,6 +2,9 @@
 <session>
  <Bookmarks/>
  <Breakpoints groups="Breakpoints" active_group="Breakpoints">
+  <BreakpointListItem trigger="" line="101" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="66" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="86" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="rak_uart_app.c" useHWbreakpoint="false"/>
   <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
  </Breakpoints>
  <ExecutionProfileWindow/>
@@ -50,11 +53,11 @@
  </TraceWindow>
  <Watch1>
   <Watches active="1" update="Never">
-   <Watchpoint expression="recvCnt" name="recvCnt" radix="10" linenumber="139" filename="../../../main.c"/>
-   <Watchpoint expression="recvBytes" name="recvBytes" radix="16" linenumber="138" filename="../../../main.c"/>
-   <Watchpoint expression="recbytes" name="recbytes" radix="16" linenumber="205" filename="../../../main.c"/>
-   <Watchpoint expression="Gsm_RxBuf" name="Gsm_RxBuf" radix="1" linenumber="67" filename="../../../main.c"/>
-   <Watchpoint expression="rxWriteIndex" name="rxWriteIndex" radix="10" linenumber="67" filename="../../../main.c"/>
+   <Watchpoint expression="recvCnt" name="recvCnt" radix="10" linenumber="157" filename="../../../main.c"/>
+   <Watchpoint expression="recvBytes" name="recvBytes" radix="16" linenumber="156" filename="../../../main.c"/>
+   <Watchpoint expression="recbytes" name="recbytes" radix="16" linenumber="223" filename="../../../main.c"/>
+   <Watchpoint numelements="300" expression="Gsm_RxBuf" evalMode="2" name="Gsm_RxBuf" radix="1" linenumber="69" filename="../../../main.c" list=""/>
+   <Watchpoint expression="rxWriteIndex" name="rxWriteIndex" radix="10" linenumber="69" filename="../../../main.c"/>
   </Watches>
  </Watch1>
  <Watch2>
@@ -67,17 +70,7 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="53" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="0" top="66" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="40" y="34" useTextEdit="1" useBinaryEdit="0" left="0" path="at_cmds.h" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="11" y="14" useTextEdit="1" useBinaryEdit="0" left="0" path="bc95_g.c" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="16" y="54" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/boards/rak8211.h" selected="0" top="30" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="5" useTextEdit="1" useBinaryEdit="0" left="0" path="l70_gps.c" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="4" y="78" useTextEdit="1" useBinaryEdit="0" left="0" path="rak_uart_app.c" selected="1" top="70" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="37" y="79" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/uart/app_uart.h" selected="0" top="67" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="19" y="4" useTextEdit="1" useBinaryEdit="0" left="0" path="rak_uart_app.h" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="3" useTextEdit="1" useBinaryEdit="0" left="0" path="bc95_g.h" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="2" useTextEdit="1" useBinaryEdit="0" left="0" path="l70_gps.h" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="220" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/uart/app_uart_fifo.c" selected="0" top="198" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="98" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="74" codecName="Default"/>
  </Files>
- <ARMCrossStudioWindow activeProject="uart_pca10040" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="/home/asus/Documents/office_workdir/nRF5SDK160098a08e2/examples/peripheral/uart/pca10040/blank/ses" debugSearchPath="" autoConnectCapabilities="3199"/>
+ <ARMCrossStudioWindow activeProject="uart_pca10040" fileDialogDefaultFilter="*.h" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="/home/asus/Documents/office_workdir/nRF5SDK160098a08e2/examples/peripheral/uart/pca10040/blank/ses" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>

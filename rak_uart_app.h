@@ -3,6 +3,7 @@
 #include "app_error.h"
 
 #include "rak8211.h"
+
 typedef enum {
               UART_USE_IDLE=0,
               UART_USE_GPRS,

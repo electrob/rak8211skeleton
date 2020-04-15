@@ -69,19 +69,19 @@
     <folder Name="Application">
       <file file_name="../../../main.c" />
       <file file_name="../config/sdk_config.h" />
+      <file file_name="at_cmds.h" />
+      <file file_name="bc95_g.c" />
+      <file file_name="bc95_g.h" />
+      <file file_name="l70_gps.c" />
+      <file file_name="l70_gps.h" />
+      <file file_name="rak_uart_app.c" />
+      <file file_name="rak_uart_app.h" />
     </folder>
     <folder Name="None">
       <file file_name="../../../../../../modules/nrfx/mdk/ses_startup_nrf52.s" />
       <file file_name="../../../../../../modules/nrfx/mdk/ses_startup_nrf_common.s" />
       <file file_name="../../../../../../modules/nrfx/mdk/system_nrf52.c" />
     </folder>
-    <file file_name="at_cmds.h" />
-    <file file_name="bc95_g.c" />
-    <file file_name="l70_gps.c" />
-    <file file_name="bc95_g.h" />
-    <file file_name="l70_gps.h" />
-    <file file_name="rak_uart_app.c" />
-    <file file_name="rak_uart_app.h" />
   </project>
   <configuration
     Name="Release"
