@@ -63,7 +63,7 @@
 #include "nrf_uarte.h"
 #endif
 
-#include "bc95_g"
+//#include "bc95_g.h"
 
 #define MAX_TEST_DATA_BYTES     (15U)                /**< max number of test bytes to be used for tx and rx. */
 
@@ -84,6 +84,22 @@ int main(void)
     gprsOn();
 
     test_gprs();
+    
+    test_gprs1();
 
+   // test_gprs1();
+    
+   nrf_delay_ms(100000);
+
+ //   test_gprs3();
+
+ //   test_gprs4();
+
+    //test_gprs2();
+
+    while(1) {
+       test_gprs2();
+       nrf_delay_ms(50000);
+    }
     return 0;
 }
