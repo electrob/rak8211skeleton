@@ -1,35 +1,34 @@
-#define  GSM_AUTO_CMD_STR               "AT"
-#define  GSM_FIXBAUD_CMD_STR            "AT+IPR="
-#define  GSM_SETECHO_CMD_STR            "ATE"
-#define  GSM_CHECKSIM_CMD_STR           "AT+CPIN?"
-//#if defined (M35)
-#define  GSM_CHECKNETWORK_CMD_STR       "AT+CREG?"
-//#elif defined (BC95)
-//#define  GSM_CHECKNETWORK_CMD_STR       "AT+CEREG?"
-//#endif
-#define  GSM_CHECKGPRS_CMD_STR          "AT+CGATT?"
-#define  GSM_SETCONTEXT_CMD_STR         "AT+QIFGCNT=0"
-#define  GSM_SETDNSMODE_CMD_STR         "AT+QIDNSIP=1"
-#define  GSM_SETSENDECHO_CMD_STR        "AT+QISDE=0"
-#define  GSM_ATS_ENABLE_CMD_STR         "ATS0=1"
 
-#define  GSM_OPENSOCKET_CMD_STR         "AT+QIOPEN="
-#define  GSM_IPSTATIC_CMD_STR           "AT+QISTAT"
-#define  GSM_RSSI_CMD_STR       	"AT+CSQ"
-#define  GSM_SENDDATA_CMD_STR           "AT+QISEND="
-#define  GSM_CLOSESOCKET_CMD_STR        "AT+QICLOSE"
+#define BC95G_ATTENTION        "AT"
 
-#define  GSM_DNS_GETIP_CMD_STR          "AT+QIDNSGIP="
-#define  GSM_HTTP_SETURL_CMD_STR        "AT+QHTTPURL="
-#define  GSM_HTTP_GET_CMD_STR           "AT+QHTTPGET="
-#define  GSM_HTTP_READ_CMD_STR          "AT+QHTTPREAD="
-#define  GSM_HTTP_POST_CMD_STR          "AT+QHTTPPOST="
-#define  GSM_HTTP_DL_CMD_STR            "AT+QHTTPDL="
+#define BC95G_PRODUCT_ID       "ATI"
 
-#define  GSM_CHECKNBAND_CMD_STR         "AT+NBAND?"
-#define  GSM_CHECKNBAND_RSP_OK          "+NBAND:"
-#define  GSM_CHECKNCFG_CMD_STR          "AT+NCONFIG?"
-//#define  GSM_CHECKIMEI_CMD_STR           "AT+CGSN=1"
-//#define  GSM_CHECKIMSI_CMD_STR           "AT+CIMI"
-#define  GSM_CHECKNCDP_CMD_STR          "AT+NCDP?"
-#define  GSM_CHECKCONSTATUS_CMD_STR     "AT+CSCON?"
+#define BC95G_SET_ECHO         "ATE"
+
+#define BC95G_CHECK_SIM        "AT+NCCID?"
+
+#define BC95G_CHK_NETWORK      "AT+CEREG?"
+
+#define BC95G_CHK_GPRS         "AT+CGATT?"
+
+#define BC95G_CON_STATUS       "AT+CSCON?"
+
+#define BC95G_GET_IMEI         "AT+CGSN=1"
+
+#define BC95G_DEFINE_PDP       "AT+CGDCONT"
+
+#define BC95G_ACT_DEACT_PDP    "AT+CGACT"
+
+#define BC95G_GET_RSSI         "AT+CSQ"
+
+#define BC95G_REBOOT           "AT+NRB"
+
+#define BC95G_CHK_BANDS        "AT+NBAND?"
+
+#define BC95G_CHK_NCFG         "AT+NCONFIG?"
+
+#define BC95G_CREATE_SOCK      "AT+NSOCR"
+
+#define BC95G_TCP_CONNECT      "AT+NOSCO"
+
+#define BC95G_TCP_SEND         "AT+NSOSD"

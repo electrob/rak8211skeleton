@@ -1,19 +1,38 @@
 
-
-
 #include "rak_uart_app.h"
 
-#define GSM_RXBUF_MAXSIZE 1600
-#define UART_TX_BUF_SIZE 256                         /**< UART TX buffer size. */
-#define UART_RX_BUF_SIZE 2048                        /**< UART RX buffer size. */
+//static 
+uint16_t rxReadIndex  = 0;
+//static 
+uint16_t rxWriteIndex = 0;
+//static 
+uint16_t rxCount      = 0;
 
-static uint16_t rxReadIndex  = 0;
-static uint16_t rxWriteIndex = 0;
-static uint16_t rxCount      = 0;
 uint8_t Gsm_RxBuf[GSM_RXBUF_MAXSIZE];
 
 uart_use_t use_uart_type = UART_USE_IDLE;
 
+/*uint8_t Gsm_RxByte(void)
+{
+    int c = -1;
+
+    __disable_irq();
+    if (rxCount > 0)
+    {
+        c = Gsm_RxBuf[rxReadIndex];
+
+        rxReadIndex++;
+        if (rxReadIndex == GSM_RXBUF_MAXSIZE)
+        {
+            rxReadIndex = 0;
+        }
+        rxCount--;
+    }
+    __enable_irq();
+
+    return c;
+}
+*/
 void Gsm_RingBuf(uint8_t in_data)
 {
     Gsm_RxBuf[rxWriteIndex] = in_data;
@@ -29,7 +48,7 @@ void Gsm_RingBuf(uint8_t in_data)
     if (rxCount == GSM_RXBUF_MAXSIZE)
     {
         rxWriteIndex = 0;
-        rxCount      = 0;
+       // rxCount      = 0;
         rxReadIndex  = 0;
     }
 }
@@ -43,8 +62,6 @@ void uart_event_handle(app_uart_evt_t * p_event)
     switch (p_event->evt_type)
     {
     case APP_UART_DATA_READY:
-       
-         
          app_uart_get(&rx_data);
          Gsm_RingBuf(rx_data);
 

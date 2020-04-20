@@ -62,8 +62,9 @@
 #if defined (UARTE_PRESENT)
 #include "nrf_uarte.h"
 #endif
+#include "bc95_g.h"
 
-//#include "bc95_g.h"
+//#include "nrf_memobj.h"
 
 #define MAX_TEST_DATA_BYTES     (15U)                /**< max number of test bytes to be used for tx and rx. */
 
@@ -71,35 +72,26 @@ int main(void)
 {
     //int  ret;
     int cnt = 0;
+    
+    uint8_t output[11] = {0};
+    uint8_t testchar[] = "helLO";
+    uint8_t loop = 0;
+    uint8_t i = 0;
+
 
     uint8_t time_count = 3;
     uint8_t  str_tmp[64];
     
-    gsm_uart_init();
+    bc95g_uart_init();
+    
+    bg95g_send_data(TCP_SOCK_ONE, "8.8.8.8", "80", "hello");
+
+//    bc95g_create_socket(BC95G_SOCK_TYPE_TCP, BC95G_PROTO_TYPE_TCP, 1);
 
     nrf_delay_ms(800);
     
-    gprsPinInit();
+    bc95g_pin_init();
     
-    gprsOn();
-
-    test_gprs();
-    
-    test_gprs1();
-
-   // test_gprs1();
-    
-   nrf_delay_ms(100000);
-
- //   test_gprs3();
-
- //   test_gprs4();
-
-    //test_gprs2();
-
-    while(1) {
-       test_gprs2();
-       nrf_delay_ms(50000);
-    }
+    bc95g_switch_on();
     return 0;
 }
