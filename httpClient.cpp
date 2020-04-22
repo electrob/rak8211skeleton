@@ -104,12 +104,12 @@ int HTTPClient::sendRequest(const char * type, uint8_t * payload, uint16_t size)
     addHeader(_httpRequestBuffer, HTTP_USR_AGNT_HEADER, HTTP_DEFAULT_USR_AGNT);
     
     strncat(http_req_buff, "\r\n", 2);
-    if(payload != NULL && size > 0) {
+    if(payload != NULL && size != NULL) {
         
         strncat(_httpRequestBuffer, HTTP_CONTENT_LEN_HEADER, strlen(payload));
     } 
 
-    // TODO: Send Get response and clear the buffers
+    // TODO: Send and Get response and clear the buffers
 }
 
 /*
