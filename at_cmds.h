@@ -32,3 +32,5 @@
 #define BC95G_TCP_CONNECT      "AT+NOSCO"
 
 #define BC95G_TCP_SEND         "AT+NSOSD"
+
+#define BC95G_GET_SERVER_IP    "AT+QDNS"

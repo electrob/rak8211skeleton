@@ -83,10 +83,6 @@ int main(void)
     uint8_t  str_tmp[64];
     
     bc95g_uart_init();
-    
-    bg95g_send_data(TCP_SOCK_ONE, "8.8.8.8", "80", "hello");
-
-//    bc95g_create_socket(BC95G_SOCK_TYPE_TCP, BC95G_PROTO_TYPE_TCP, 1);
 
     nrf_delay_ms(800);
     
