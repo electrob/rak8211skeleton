@@ -1,5 +1,5 @@
 
-#include <httpClient.h>
+#include "httpClient.h"
 
 HTTPClient::HTTPClient()
 {
@@ -18,7 +18,7 @@ bool HTTPClient::begin(uint8_t * host)
     }
 }
 
-bool HTTPClient::begin(uint8_t * host, uint8_t * port, bool https)
+bool HTTPClient::begin( uint8_t * host, uint8_t * port, bool https)
 {
     strcpy(_host, host);
     strcpy(_port, port);
@@ -108,7 +108,8 @@ int HTTPClient::sendRequest(const char * type, uint8_t * payload, uint16_t size)
         
         strncat(_httpRequestBuffer, HTTP_CONTENT_LEN_HEADER, strlen(payload));
     } 
-
+    
+    return 1;
     // TODO: Send and Get response and clear the buffers
 }
 

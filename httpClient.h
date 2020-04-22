@@ -105,35 +105,30 @@ public:
     ~HTTPClient();
 
     bool begin(uint8_t * host);
-    bool begin(uint8_t * host, uint8_t* port, bool https);
+    bool begin(uint8_t * host,  uint8_t * port, bool https);
 
     bool connected(void);
 
     /* Request */
     int GET();
 
-    int POST(uint8_t * payload, size_t size);
+    int POST(uint8_t * payload, uint16_t size);
     int POST(uint8_t * payload);
     
-    int PUT(uint8_t * payload, size_t size);
+    int PUT(uint8_t * payload, uint16_t size);
     int PUT(uint8_t * payload);
     
     int sendRequest(const char * type);
     int sendRequest(const char * type, uint8_t * payload);
     int sendRequest(const char * type, uint8_t * payload, uint16_t payloadSize);
 
-    void addHeader(uint8_t * headerName, uint8_t * headerValue);
+    void addHeader(uint8_t * http_req_buff, uint8_t * key, uint8_t * value);
 
     /* Response */
-    void collectHeaders(const char* headerKeys[], const size_t headerKeysCount);
-
-protected:
-
-    int returnError(int error);
-    bool connect(void);
+   // void collectHeaders(const char* headerKeys[], const size_t headerKeysCount);
     
-    uint8_t _host[MAX_HOST_NAME_LENGTH] = {0};
-    uint8_t _port[MAX_PORT_LENGTH] = {0};
+    char _host[MAX_HOST_NAME_LENGTH] = {0};
+    char _port[MAX_PORT_LENGTH] = {0};
     uint8_t _protocol[HTTP_PROTOCOL_LEN] = {0};
     
     bool _protocol_check = false;
@@ -142,5 +137,12 @@ protected:
     uint8_t _http_headers[HTTP_BUFF_MAX_LEN] = {0};
 
     uint8_t _userAgent[10] = {0};
+
+protected:
+
+    int returnError(int error);
+    bool connect(void);
+    
+    
 
 }
