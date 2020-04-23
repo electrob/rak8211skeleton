@@ -69,25 +69,14 @@
 #define MAX_TEST_DATA_BYTES     (15U)                /**< max number of test bytes to be used for tx and rx. */
 
 int main(void)
-{
-    //int  ret;
-    int cnt = 0;
-    
-    uint8_t output[11] = {0};
-    uint8_t testchar[] = "helLO";
-    uint8_t loop = 0;
-    uint8_t i = 0;
+{   
+    uint8_t imei[30] = {0};
 
-
-    uint8_t time_count = 3;
-    uint8_t  str_tmp[64];
-    
     bc95g_uart_init();
+    
+    bc95g_pin_init();
 
     nrf_delay_ms(800);
     
-    bc95g_pin_init();
-    
-    bc95g_switch_on();
     return 0;
 }

@@ -44,10 +44,19 @@ bool bc95g_chk_response (uint8_t*);
 
 bool bc95g_create_socket (uint8_t*, uint8_t*, uint8_t);
 
-bool bg95g_send_data (uint8_t*, uint8_t*, uint8_t*, uint8_t*);
+bool bg95g_send_data_tcp (uint8_t*, uint8_t*, uint8_t*, uint8_t*);
+
+bool bg95g_send_data_udp (uint8_t*, uint8_t*, uint8_t*, uint8_t*);
 
 void bc95g_get_imei(uint8_t*);
 
+void bc95g_echo_settings(bool);
+
+void bc95g_basic_setup(void);
+
+void bc95g_nw_cfg_set(uint8_t *, bool);
+
+void wait_for_response(uint8_t*);
 
 void test_gprs(void);
 

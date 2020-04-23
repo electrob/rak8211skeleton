@@ -1,5 +1,6 @@
 
 #include "httpClient.h"
+#include "bc95_g.h"
 
 HTTPClient::HTTPClient()
 {
@@ -40,6 +41,9 @@ bool HTTPClient::begin( uint8_t * host, uint8_t * port, bool https)
 bool HTTPClient::connect(void)
 {
     // TODO: Connect to the TCP
+    bc95g_create_socket(BC95G_SOCK_TYPE_TCP, 
+                        BC95G_PROTO_TYPE_TCP, 
+                        TCP_SOCK_ONE);
 }
 
 /* 
@@ -90,7 +94,7 @@ int HTTPClient::sendRequest(const char * type, uint8_t * payload)
 
 int HTTPClient::sendRequest(const char * type, uint8_t * payload, uint16_t size)
 {
-    //TODO: Check for connection
+    //TODO: Check for connection, only for keep alive
     
     strncat(_httpRequestBuffer, type, strlen(type));
     strncat(_httpRequestBuffer, " ", 1);
@@ -109,6 +113,12 @@ int HTTPClient::sendRequest(const char * type, uint8_t * payload, uint16_t size)
         strncat(_httpRequestBuffer, HTTP_CONTENT_LEN_HEADER, strlen(payload));
     } 
     
+
+    //Use bc95-g functions to send data
+    bg95g_send_data_tcp(TCP_SOCK_ONE,
+                        _host,
+                        _port,
+                        _httpRequestBuffer);
     return 1;
     // TODO: Send and Get response and clear the buffers
 }
